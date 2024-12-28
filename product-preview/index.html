@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+        <div class="popup-trigger__container">
+          <button class="button button--show-modal">Show Modal</button>   
+        </div>
+    
+        <div class="popup-modal">
+          <div class="popup-modal__wrapper">
+            <div class="popup-modal__overlay"></div>
+            <div class="popup-modal__content">
+              <div class="popup-modal__content-wrapper">
+              <div class="popup-modal-content__img-wrapper">
+                <img src="./image-product-desktop.jpg">
+              </div>
+              <div class="popup-modal-content__details">
+                <div class="perfume">
+                <span>PERFUME</span>
+            </div>
+            <div class="item-name">
+                <h2>Gabrielle <br>  Essence Eau <br>
+                    De Parfum</h2>
+            </div>
+            <div class="item-description">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat repellendus, mollitia soluta accusamus necessitatibus numquam. </p>
+            </div>
+            <div class="product-price">
+                <p class="product-new-price">$149.99</p>
+                <p class="product-old-price">$169.99</p>
+              </div>
+  
+                <button class=" button cart-btn">
+                <i class="fa-solid fa-cart-shopping"></i>
+                Add to Cart
+                </button>
+            </button>   
+              </div>
+            </div>
+          </div>
+        </div>
+    
+      <script>
+        let popupModalEl = document.querySelector(".popup-modal");
+        let popupOverlayEl = document.querySelector(".popup-modal__overlay");
+        let popupTriggerBtn = document.querySelector(".button--show-modal");
+    
+        // let closeBtnPopup = document.querySelector("");
+    
+        function showPopup() {
+          popupModalEl.classList.add('show')
+        }
+        function hidePopup() {
+          popupModalEl.classList.remove('show')
+        }
+        
+        popupTriggerBtn.addEventListener("click", () => {
+          showPopup();
+        });
+        popupOverlayEl.addEventListener('click', () => {
+          hidePopup()
+        })
+    
+        setTimeout(() => {
+          showPopup();
+        }, 3000);
+      </script>
+</body>
+</html>
